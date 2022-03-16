@@ -37,15 +37,15 @@ fun main() {
         student.earnExtraCredit()
     }
 
-    students.forEach { it.earnExtraCredit() }
+    students.forEach { student -> student.earnExtraCredit() }
 
-    val classLibraryBooks: MutableList<List<String>> = mutableListOf()
-    for (student in students) {
-        classLibraryBooks.add(student.libraryBooks)
-    }
+//    val classLibraryBooks: MutableList<List<String>> = mutableListOf()
+//    for (student in students) {
+//        classLibraryBooks.add(student.libraryBooks)
+//    }
 
-    students.forEach { classLibraryBooks.add(it.libraryBooks) }
-    println(classLibraryBooks)
+    val classLibraryBooks2  = students.map { student -> student.libraryBooks }
+    println(classLibraryBooks2)
 
 
 /*:
@@ -53,6 +53,6 @@ fun main() {
   Create a list of student pets
 */
 
-    val studentPets = students.mapNotNull { it.pet }
+    val studentPets = students.mapNotNull { student -> student.pet }
     println(studentPets)
 }
