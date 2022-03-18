@@ -20,19 +20,16 @@ interface Shape {
 
 }
 
-class Square(val side: Double) : Shape {
-    override val area: Double
-        get() = side * side
+class Square(side: Double) : Shape {
+    override val area: Double = side * side
 }
 
-class Triangle(val base: Double, val height: Double) : Shape {
-    override val area: Double
-        get() = 0.5 * base * height
+class Triangle(base: Double, height: Double) : Shape {
+    override val area: Double = 0.5 * base * height
 }
 
-class Circle(val radius: Double) : Shape {
-    override val area: Double
-        get() = kotlin.math.PI * radius * radius
+class Circle(radius: Double) : Shape {
+    override val area: Double = kotlin.math.PI * radius * radius
 }
 
 
@@ -44,4 +41,5 @@ fun main() {
     val shapes = arrayOf(square, triangle, circle)
     val areas = shapes.map { shape -> shape.area }
     println(areas)
+
 }

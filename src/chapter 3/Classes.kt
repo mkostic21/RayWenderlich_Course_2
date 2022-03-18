@@ -62,9 +62,9 @@ fun detectAnimal(animal: Animal) {
 
 fun main() {
     val genericAnimal = Animal()
-    val tiger = WildAnimal(false)
-    val genericPet = Pet("Name1")
-    val dog = Dog("Max")
+    val tiger = WildAnimal(isPoisonous = false)
+    val genericPet = Pet(name = "Name1")
+    val dog = Dog(name = "Max")
 
     val animals = arrayOf(genericAnimal, tiger, genericPet, dog)
     animals.forEach { animal ->
